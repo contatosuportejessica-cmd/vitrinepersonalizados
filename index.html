@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Acesse os cartões de vista abaixo.</title>
+<meta name="description" content="Clique no modelo que deseja, que abre diretamente no Canva" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
+<style>
+html,body{margin:0;padding:0;background:#0A0714}
+
+.sc *{box-sizing:border-box}
+.sc{background:#0A0714;color:#F5F3FF;font-family:'Inter',system-ui,-apple-system,sans-serif;min-height:100vh;-webkit-font-smoothing:antialiased}
+.sc img{max-width:100%;display:block}
+.sc button{font:inherit}
+.sc .wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+.sc .hdr{position:sticky;top:0;z-index:20;background:rgba(10,7,20,0.82);backdrop-filter:blur(16px) saturate(150%);border-bottom:1px solid #2A2145}
+.sc .hdr .in{max-width:1200px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:12px}
+.sc .brand{display:flex;align-items:center;gap:10px;min-width:0}
+.sc .brand img{width:36px;height:36px;border-radius:10px;object-fit:cover;flex:0 0 auto}
+.sc .brand .ph{width:36px;height:36px;border-radius:10px;flex:0 0 auto;background:linear-gradient(135deg,#8B5CF6,#C084FC);box-shadow:0 0 18px -4px rgba(168,85,247,0.7)}
+.sc .brand b{font-size:15px;font-weight:800;letter-spacing:-.01em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sc .hdr .sp{flex:1}
+.sc .hdr .hsearch{max-width:300px;flex:1 1 140px}
+.sc .avatar{width:34px;height:34px;border-radius:999px;object-fit:cover;border:1px solid #2A2145}
+.sc .ghost{padding:8px 12px;border-radius:12px;border:1px solid #2A2145;background:transparent;color:#A5A0C8;cursor:pointer;font-size:13px}
+.sc .hero{position:relative;margin:22px 0 0;border-radius:24px;overflow:hidden;border:1px solid rgba(139,92,246,0.28);background:linear-gradient(115deg,rgba(139,92,246,0.2),rgba(21,16,36,0.92) 48%,rgba(192,132,252,0.16));box-shadow:0 40px 90px -55px rgba(168,85,247,0.55)}
+.sc .hero::before{content:"";position:absolute;width:460px;height:460px;right:-140px;top:-180px;background:radial-gradient(circle,rgba(168,85,247,0.3),transparent 65%);pointer-events:none}
+.sc .hero::after{content:"";position:absolute;width:380px;height:380px;left:-150px;bottom:-200px;background:radial-gradient(circle,rgba(139,92,246,0.24),transparent 65%);pointer-events:none}
+.sc .hero .bgimg{position:absolute;inset:0;background-size:cover;background-position:center}
+.sc .hero .bgimg.mob{display:none}
+@media(max-width:640px){.sc .hero .bgimg.desk{display:none}.sc .hero .bgimg.mob{display:block}}
+.sc .hero .veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,7,20,0.2),rgba(10,7,20,0.85))}
+.sc .hero .ct{position:relative;z-index:1;padding:clamp(30px,5vw,56px) clamp(20px,4vw,48px);display:grid;gap:12px}
+.sc .hero.center .ct{text-align:center;justify-items:center}
+.sc .hero h1{font-size:clamp(26px,4vw,44px);font-weight:800;letter-spacing:-.03em;margin:0;line-height:1.12;max-width:24ch}
+.sc .hero p.sub{margin:0;font-size:clamp(14px,1.6vw,17px);color:#A5A0C8;max-width:56ch;line-height:1.55}
+.sc .hero p.supp{margin:0;font-size:13px;color:#A5A0C8;opacity:.85}
+.sc .hero .ct .btn{justify-self:start}
+.sc .hero.center .ct .btn{justify-self:center}
+.sc .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:11px 20px;border-radius:12px;font-weight:600;font-size:14px;cursor:pointer;text-decoration:none;transition:transform .18s ease,box-shadow .18s ease,opacity .18s;background:#8B5CF6;color:#fff;border:none;box-shadow:0 14px 26px -18px rgba(139,92,246,0.9);}
+.sc .btn:hover{transform:translateY(-1px);opacity:.95}
+.sc .searchbar{position:relative;margin:24px 0 0;max-width:640px}
+.sc .searchbar svg{position:absolute;left:16px;top:50%;transform:translateY(-50%);opacity:.5}
+.sc .search{width:100%;padding:13px 16px 13px 44px;border-radius:999px;border:1px solid #2A2145;background:rgba(21,16,36,0.85);color:#F5F3FF;font-size:14px;font-family:inherit;outline:none;transition:box-shadow .2s,border-color .2s}
+.sc .hsearch .search{padding:9px 14px 9px 38px;font-size:13px}
+.sc .hsearch svg{left:13px}
+.sc .search::placeholder{color:#A5A0C8}
+.sc .search:focus{border-color:#8B5CF6;box-shadow:0 0 0 4px rgba(168,85,247,0.16)}
+.sc .chips{display:flex;gap:8px;margin:18px 0 0;overflow-x:auto;padding-bottom:4px;scrollbar-width:none}
+.sc .chips::-webkit-scrollbar{display:none}
+.sc .chip{white-space:nowrap;padding:8px 16px;border-radius:999px;font-size:13px;font-weight:500;cursor:pointer;border:1px solid #2A2145;background:rgba(21,16,36,0.7);color:#A5A0C8;transition:all .18s}
+.sc .chip:hover{color:#F5F3FF;border-color:rgba(139,92,246,0.5)}
+.sc .chip.active{background:#8B5CF6;border-color:#8B5CF6;color:#fff;box-shadow:0 0 20px -6px rgba(168,85,247,0.8)}
+.sc main{padding:30px 0 64px;display:grid;gap:36px}
+.sc .sechead{display:flex;align-items:center;gap:12px;margin:0 0 16px}
+.sc h2.sec{font-size:19px;font-weight:800;letter-spacing:-.01em;margin:0;padding-left:12px;border-left:3px solid #8B5CF6;border-radius:2px;line-height:1.2}
+.sc h2.featured-title{max-width:100%;min-width:0;padding:10px 18px;border:1.5px solid #8B5CF6;border-radius:999px;background:rgba(139,92,246,0.12);color:#F5F3FF;box-shadow:0 0 20px -8px rgba(168,85,247,0.5);font-size:20px;line-height:1.35;letter-spacing:0;overflow-wrap:anywhere}
+.sc .sechead:has(.featured-title){flex-wrap:wrap}
+.sc .count{font-size:11px;font-weight:600;color:#A5A0C8;border:1px solid #2A2145;padding:3px 10px;border-radius:999px}
+.sc .grid{display:grid;gap:16px;grid-template-columns:repeat(2,minmax(0,1fr))}
+@media(min-width:640px){.sc .grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(min-width:1024px){.sc .grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.sc .grid.feat{grid-template-columns:repeat(1,minmax(0,1fr))}
+@media(min-width:640px){.sc .grid.feat{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(min-width:1024px){.sc .grid.feat{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.sc .card{border-radius:18px;overflow:hidden;cursor:pointer;display:flex;flex-direction:column;text-align:left;padding:0;color:inherit;transition:transform .2s ease,box-shadow .25s ease,border-color .2s ease;background:#151024;border:1px solid rgba(168,85,247,0.22);box-shadow:0 22px 48px -32px rgba(245,243,255,0.3), 0 0 17px -12px rgba(168,85,247,0.315);}
+.sc .card:hover{transform:translateY(-4px);border-color:rgba(168,85,247,0.45);box-shadow:0 20px 44px -26px rgba(168,85,247,0.6),0 0 26px -10px rgba(168,85,247,0.4)}
+.sc .card .cover{aspect-ratio:16/9;background-size:cover;background-position:center;background-color:rgba(139,92,246,0.12)}
+.sc .card .body{padding:13px 14px 15px;display:flex;flex-direction:column;gap:7px;flex:1}
+.sc .pill{font-size:11px;font-weight:600;padding:4px 10px;border-radius:999px;background:rgba(139,92,246,0.14);color:#C084FC;align-self:flex-start;border:1px solid rgba(139,92,246,0.25)}
+.sc .card .t{font-size:15px;font-weight:700;line-height:1.32;letter-spacing:-.01em}
+.sc .card .d{font-size:12.5px;color:#A5A0C8;line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.sc .card .go{margin-top:auto;padding:9px 14px;font-size:13px;width:100%;justify-content:center}
+.sc .empty{color:#A5A0C8;font-size:14px}
+.sc .detail{max-width:900px;margin:0 auto;padding:24px 20px 64px}
+.sc .detail .hero-img{width:100%;max-height:360px;object-fit:cover;border-radius:22px;margin-top:18px;border:1px solid #2A2145}
+.sc .detail h1{font-size:clamp(24px,3.4vw,34px);font-weight:800;letter-spacing:-.02em;margin:20px 0 8px}
+.sc .detail .desc{color:#A5A0C8;line-height:1.7;font-size:15px;overflow-wrap:anywhere}
+.sc .detail .desc.rich p{margin:0 0 .8em}
+.sc .detail .desc.rich > :first-child{margin-top:0}
+.sc .detail .desc.rich > :last-child{margin-bottom:0}
+.sc .detail .desc.rich h1{font-size:clamp(22px,3vw,30px);font-weight:800;line-height:1.22;margin:1em 0 .5em;color:#F5F3FF}
+.sc .detail .desc.rich h2{font-size:clamp(19px,2.4vw,24px);font-weight:700;line-height:1.28;margin:.9em 0 .45em;color:#F5F3FF}
+.sc .detail .desc.rich h3{font-size:18px;font-weight:700;line-height:1.3;margin:.8em 0 .4em;color:#F5F3FF}
+.sc .detail .desc.rich h4,.sc .detail .desc.rich h5,.sc .detail .desc.rich h6{font-size:16px;font-weight:700;margin:.7em 0 .35em;color:#F5F3FF}
+.sc .detail .desc.rich ul,.sc .detail .desc.rich ol{margin:.5em 0 .9em;padding-left:1.35em}
+.sc .detail .desc.rich li{margin:.28em 0}
+.sc .detail .desc.rich a{color:#8B5CF6;text-decoration:underline;overflow-wrap:anywhere}
+.sc .detail .desc.rich strong,.sc .detail .desc.rich b{color:#F5F3FF;font-weight:700}
+.sc .detail .desc.rich em,.sc .detail .desc.rich i{font-style:italic}
+.sc .detail .desc.rich u{text-decoration:underline}
+.sc .detail .desc.rich s,.sc .detail .desc.rich strike,.sc .detail .desc.rich del{text-decoration:line-through}
+.sc .detail .desc.rich img{display:block;max-width:100%;height:auto;border-radius:14px;margin:.9em auto;border:1px solid #2A2145}
+.sc .detail .desc.rich blockquote{margin:.8em 0;padding:.15em 0 .15em 1em;border-left:3px solid rgba(139,92,246,0.6);color:#A5A0C8}
+.sc .detail .desc.rich hr{border:0;border-top:1px solid #2A2145;margin:1.2em 0}
+.sc .detail .desc.rich pre{background:rgba(245,243,255,0.06);padding:12px;border-radius:14px;overflow-x:auto;font-size:13px}
+.sc .detail .desc.rich code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.92em}
+.sc .detail .desc.rich sub,.sc .detail .desc.rich sup{font-size:.75em}
+@media(max-width:640px){.sc .detail .desc.rich h1{font-size:22px}.sc .detail .desc.rich h2{font-size:19px}.sc .detail .desc.rich ul,.sc .detail .desc.rich ol{padding-left:1.2em}}
+.sc .divider{height:1px;background:#2A2145;margin:26px 0 20px}
+.sc .res{display:flex;align-items:center;gap:14px;padding:14px 16px;border-radius:14px;text-decoration:none;color:inherit;margin-bottom:10px;transition:transform .18s,border-color .18s;background:#151024;border:1px solid rgba(168,85,247,0.22);box-shadow:0 22px 48px -32px rgba(245,243,255,0.3), 0 0 17px -12px rgba(168,85,247,0.315);}
+.sc .res:hover{transform:translateY(-2px);border-color:rgba(139,92,246,0.5)}
+.sc .res .ico{font-size:20px;width:38px;height:38px;flex:0 0 auto;display:grid;place-items:center;border-radius:11px;background:rgba(139,92,246,0.1)}
+.sc .res .info{flex:1;min-width:0}
+.sc .res .info .t{font-weight:600;font-size:14.5px;display:block}
+.sc .res .info .s{font-size:12px;color:#A5A0C8;display:block}
+.sc .res .cta{font-size:13px;font-weight:600;color:#8B5CF6;white-space:nowrap}
+.sc .btn.purchase{display:flex;width:100%;height:auto;min-height:60px;margin-bottom:14px;padding:18px 24px;font-size:20px;font-weight:800;line-height:1.35;white-space:normal;text-align:center;overflow-wrap:anywhere;box-shadow:0 12px 30px -12px rgba(168,85,247,0.7)}
+.sc .purchase-block{margin-bottom:14px}
+.sc .purchase-block .btn.purchase{margin-bottom:0}
+.sc .price-box{margin-bottom:12px;padding:14px 16px;border-radius:14px;background:rgba(139,92,246,0.08);border:1px solid rgba(139,92,246,0.22)}
+.sc .price-label{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#A5A0C8;margin-bottom:6px}
+.sc .price-row{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.sc .price-current{font-size:28px;font-weight:800;line-height:1.1;color:#F5F3FF}
+.sc .price-old{font-size:16px;color:#A5A0C8;text-decoration:line-through}
+.sc .price-badge{display:inline-flex;align-items:center;padding:3px 8px;border-radius:999px;font-size:12px;font-weight:700;background:rgba(139,92,246,0.15);color:#8B5CF6}
+@media(max-width:640px){.sc .price-current{font-size:24px}.sc .price-box{padding:12px 14px}}
+.sc .back{border:1px solid #2A2145;background:#151024;border-radius:12px;padding:8px 14px;cursor:pointer;font-size:13px;color:#A5A0C8}
+.sc .gate{min-height:100vh;display:grid;place-items:center;padding:16px;background:radial-gradient(700px 380px at 15% -10%, rgba(139,92,246,0.28), transparent 60%),radial-gradient(600px 360px at 100% 110%, rgba(192,132,252,0.22), transparent 60%),linear-gradient(160deg, rgba(139,92,246,0.14), rgba(192,132,252,0.1)),#0A0714}
+.sc .gate .box{width:100%;max-width:400px;border-radius:20px;padding:28px;display:grid;gap:12px;justify-items:center;text-align:center;background:#151024;border:1px solid rgba(139,92,246,0.25);box-shadow:0 30px 70px -25px rgba(139,92,246,0.45),0 0 0 1px rgba(15,23,42,.05)}
+.sc .gate img.logo{width:56px;height:56px;border-radius:14px;object-fit:cover}
+.sc .gate h2{margin:0;font-size:20px;font-weight:800}
+.sc .gate p{margin:0;font-size:13px;color:#A5A0C8;line-height:1.5}
+.sc .gate input{width:100%;padding:11px 14px;border-radius:12px;border:1px solid #2A2145;background:#0A0714;color:#F5F3FF;font-size:14px;font-family:inherit;outline:none}
+.sc .gate .btn{width:100%}
+.sc .gate .info{width:100%;box-sizing:border-box;padding:14px 16px;border-radius:18px;background:linear-gradient(135deg, rgba(139,92,246,0.12), rgba(192,132,252,0.1));border:1px solid rgba(139,92,246,0.28);color:#F5F3FF;font-size:15px;font-weight:600;line-height:1.45;white-space:pre-wrap}
+.sc .gate .notice{width:100%;box-sizing:border-box;display:flex;gap:8px;align-items:flex-start;text-align:left;padding:12px;border-radius:12px;background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.3);font-size:12px;line-height:1.45;color:#F5F3FF;white-space:pre-wrap}
+.sc .gate .support{width:100%;padding-top:12px;border-top:1px solid #2A2145;display:grid;gap:8px;font-size:12px;color:#A5A0C8}
+.sc .gate .support .links{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.sc .gate .support a{color:#8B5CF6;text-decoration:none;font-weight:600}
+.sc .wel{position:fixed;inset:0;z-index:100;display:grid;place-items:center;padding:16px;background:rgba(15,23,42,.55);backdrop-filter:blur(6px)}
+.sc .wel .bx{width:100%;max-width:460px;max-height:90vh;overflow:auto;padding:26px;border-radius:20px;background:#151024;color:#F5F3FF;border:1px solid rgba(139,92,246,0.25);box-shadow:0 30px 80px -20px rgba(0,0,0,.45);display:grid;gap:14px}
+.sc .wel h3{margin:0;font-size:20px;font-weight:800}
+.sc .wel .m{font-size:14px;line-height:1.55;color:#A5A0C8;white-space:pre-wrap}
+.sc .wel label{display:flex;gap:8px;align-items:flex-start;font-size:13px;cursor:pointer}
+.sc .wel .btn{width:100%}
+.sc .wel .btn:disabled{opacity:.5;cursor:not-allowed}
+.sc .err{color:#dc2626;font-size:12px}
+.sc .prof{position:relative}
+.sc .profbtn{display:flex;align-items:center;gap:8px;padding:5px 10px 5px 5px;border-radius:999px;border:1px solid #2A2145;background:#151024;color:#F5F3FF;cursor:pointer;font-size:13px;font-family:inherit}
+.sc .profbtn .ini{width:26px;height:26px;border-radius:999px;display:grid;place-items:center;background:#8B5CF6;color:#fff;font-size:11px;font-weight:700}
+.sc .profmenu{position:absolute;right:0;top:calc(100% + 8px);min-width:260px;padding:14px;border-radius:18px;border:1px solid #2A2145;background:#0A0714;box-shadow:0 24px 60px -20px rgba(0,0,0,.35);z-index:60;text-align:left;isolation:isolate}
+.sc .profmenu .n{font-weight:700;font-size:14px}
+.sc .profmenu .e{font-size:12px;color:#A5A0C8;margin:2px 0 12px;word-break:break-all}
+.sc .profmenu .ghost{width:100%;color:#F5F3FF;font-weight:600;font-family:inherit}
+@media(max-width:640px){.sc .profbtn .nm{display:none}}
+.sc footer{text-align:center;padding:26px 16px;color:#A5A0C8;font-size:12px;border-top:1px solid #2A2145}
+
+</style>
+</head>
+<body>
+<div id="app" class="sc"></div>
+<script id="data" type="application/json">{"area":{"name":"Cartão de visita","title":"Acesse os cartões de vista abaixo.","subtitle":"Clique no modelo que deseja, que abre diretamente no Canva","logoUrl":"","bannerDesktop":"","bannerMobile":"","showBrandName":true,"headerSearch":false,"avatarUrl":"","showLogout":false,"heroEnabled":true,"heroAlign":"left","heroSupport":"","heroButtonLabel":"","heroButtonUrl":"","searchEnabled":true,"searchPlaceholder":"Encontre o que você procura...","featuredLabel":"Destaques","allLabel":"Todos os produtos","primaryColor":"#8B5CF6","secondaryColor":"#C084FC","accessPassword":"acesso123","loginLogoUrl":"","loginDisplayName":"Cartão de vista Premium","loginTagline":"Acesse sua vitrine","loginAccessNotice":"Acesso individual. Não compartilhe seus dados de acesso.","loginInstructions":"Entre com os dados que foram enviados no seu e-mail.","loginSupportText":"Precisa de ajuda? ","welcomeEnabled":true,"welcomeTitle":"🎉 Seja muito bem-vindo(a), {nome}!","welcomeMessage":"É um prazer ter você em nossa vitrine!\n\nAntes de começar, leia estas informações importantes:\n\n✅ Seu acesso é individual e intransferível.\n✅ Não compartilhe seu login ou sua senha com outras pessoas.\n✅ O compartilhamento de acesso poderá resultar na suspensão ou no bloqueio do seu acesso à plataforma, conforme as regras do produtor.\n\nDesejamos um excelente aprendizado!","welcomeButton":"Começar agora","welcomeRequireTerms":true,"welcomeTerms":"Li e concordo com as regras de utilização da plataforma.","loginBackgroundUrl":"","supportEmail":"contatosuportejessica@gmail.com","supportWhatsapp":"8892586651"},"categories":[{"id":"mq2yjvrvmwbclrcv","name":"Canva"},{"id":"ftqy6g8bmwbclrcv","name":"LOJA"},{"id":"8pnr38vqmwbclrcv","name":"Templates"},{"id":"idrbo0bsmwbclrcv","name":"Ferramentas"}],"products":[{"id":"576djjlbmwbcrgcs","sectionId":"mq2yjvrvmwbclrcv","title":"Cartão de nichos e profissões variadas","cover":"https://i.imgur.com/wyyVKFH.jpeg","short":"","description":"","descHtml":"","rich":"","tag":"","featured":false,"cta":"Acessar","accent":""},{"id":"ptvtkhyemwbcytya","sectionId":"mq2yjvrvmwbclrcv","title":"Cartões Perfume, joias e maquiagem","cover":"https://i.imgur.com/LazLKKS.jpeg","short":"","description":"","descHtml":"","rich":"","tag":"Novo","featured":false,"cta":"Acessar","accent":""},{"id":"a5r6d0gfmwbd3e5p","sectionId":"mq2yjvrvmwbclrcv","title":" Cartões Papelaria, presentes","cover":"https://i.imgur.com/YbAzaH9.png","short":"","description":"","descHtml":"","rich":"","tag":"","featured":false,"cta":"Acessar","accent":""},{"id":"q1kejse0mwbd6tkp","sectionId":"mq2yjvrvmwbclrcv","title":"Cartão Confeitaria - lanches","cover":"https://i.imgur.com/XSiRJ8T.jpeg","short":"","description":"","descHtml":"","rich":"","tag":"","featured":false,"cta":"Acessar","accent":""},{"id":"j07azkc4mwbd8oxo","sectionId":"mq2yjvrvmwbclrcv","title":"Cartões de Laços","cover":"https://i.imgur.com/IrOcghb.jpeg","short":"","description":"","descHtml":"","rich":"","tag":"","featured":false,"cta":"Acessar","accent":""},{"id":"rljxi6fbmwbdccw9","sectionId":"mq2yjvrvmwbclrcv","title":"Cartões Roupas, calçados e bolsas","cover":"https://i.imgur.com/BTd7vkp.jpeg","short":"","description":"","descHtml":"","rich":"","tag":"","featured":false,"cta":"Acessar","accent":""},{"id":"6fcaepp1mwbdg9bi","sectionId":"mq2yjvrvmwbclrcv","title":"Cartão de Borboleta e Flores","cover":"https://i.imgur.com/p6nfPaj.jpeg","short":"","description":"","descHtml":"","rich":"","tag":"","featured":false,"cta":"Acessar","accent":""},{"id":"qkfbbnmamwbemjf8","sectionId":"mq2yjvrvmwbclrcv","title":"Bônus","cover":"https://i.imgur.com/lpk3FSW.png","short":"","description":"","descHtml":"","rich":"","tag":"","featured":false,"cta":"Acessar","accent":""},{"id":"y39jb8phmwbfkyix","sectionId":"mq2yjvrvmwbclrcv","title":"Modelos para divulgar instagram","cover":"https://i.imgur.com/8lXoAGL.png","short":"","description":"","descHtml":"","rich":"","tag":"","featured":false,"cta":"Acessar","accent":""},{"id":"chbwpkycmwbdrmwp","sectionId":"ftqy6g8bmwbclrcv","title":"Tenha seu CATÁLOGO Online 24h","cover":"https://i.imgur.com/GWPWTRl.png","short":"","description":"Crie sua vitrine online, divulgue todos os seus produtos, com Gestão de estoque, Cupons de desconto , frete, Orçamentos em PDF, tudo em um único lugar","descHtml":"\u003cp>Crie sua vitrine online, divulgue todos os seus produtos, com Gestão de estoque, Cupons de desconto , frete, Orçamentos em PDF, tudo em um único lugar\u003c/p>","rich":"","tag":"","featured":true,"cta":"Comprar agora","accent":""},{"id":"kkusuq48mwbfrp8t","sectionId":"ftqy6g8bmwbclrcv","title":"App gerador de QR Code","cover":"https://i.imgur.com/VQrb0Px.png","short":"","description":"imediata 🚀 GERADOR DE QR CODE PROFISSIONAL  Crie QR Codes personalizados de forma rápida, simples e profissional com nosso aplicativo web!  ✅ QR Code para Pix ✅ QR Code para WhatsApp ✅ QR Code para Instagram ✅ QR Code para Wi-Fi ✅ QR Code para Cardápios Digitais ✅ QR Code para Telefones ✅ QR Code para Links e Sites ✅ QR Code para Eventos  🎨 Personalize do seu jeito! Escolha cores, adicione seu logotipo e crie plaquinhas profissionais.  📥 Exporte e imprima! Salve seus QR Codes em PNG, SVG ou PDF com poucos cliques.  💻 100% ONLINE E FÁCIL DE USAR!  Basta criar seu cadastro e ter acesso ao aplicativo web, sem precisar instalar nada no seu celular ou computador.  🚀 Modernize seu atendimento, agilize seu negócio e facilite a vida dos seus clientes com QR Codes profissionais!","descHtml":"\u003cp>imediata 🚀 GERADOR DE QR CODE PROFISSIONAL  Crie QR Codes personalizados de forma rápida, simples e profissional com nosso aplicativo web!  ✅ QR Code para Pix ✅ QR Code para WhatsApp ✅ QR Code para Instagram ✅ QR Code para Wi-Fi ✅ QR Code para Cardápios Digitais ✅ QR Code para Telefones ✅ QR Code para Links e Sites ✅ QR Code para Eventos  🎨 Personalize do seu jeito! Escolha cores, adicione seu logotipo e crie plaquinhas profissionais.  📥 Exporte e imprima! Salve seus QR Codes em PNG, SVG ou PDF com poucos cliques.  💻 100% ONLINE E FÁCIL DE USAR!  Basta criar seu cadastro e ter acesso ao aplicativo web, sem precisar instalar nada no seu celular ou computador.  🚀 Modernize seu atendimento, agilize seu negócio e facilite a vida dos seus clientes com QR Codes profissionais!\u003c/p>","rich":"\u003cdiv class=\"detail-rating\" style=\"display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin-top: 12px; font-size: 11px; color: rgb(106, 125, 149); font-family: Inter, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif; background-color: rgb(6, 16, 29);\">\u003cspan class=\"verified\" style=\"display: inline-flex; align-items: center; gap: 5px; color: rgb(124, 162, 232);\">\u003cdiv class=\"detail-rating\" style=\"border-color: lab(18.6105 2.14739 -7.15765 / 0.4); margin: 12px 0px 0px; display: flex; align-items: center; flex-wrap: wrap; gap: 10px; color: rgb(106, 125, 149);\">\u003cspan class=\"verified\" style=\"border-color: lab(18.6105 2.14739 -7.15765 / 0.4); display: inline-flex; align-items: center; gap: 5px; color: rgb(124, 162, 232);\">\u003cbr>\u003c/span>\u003c/div>\u003c/span>\u003c/div>","tag":"","featured":true,"cta":"Comprar agora","accent":""},{"id":"ex7di3z0mwbfxvog","sectionId":"ftqy6g8bmwbclrcv","title":"💰Calculadora de Precificação Automática","cover":"https://i.imgur.com/MDoa78M.png","short":"","description":"Pare de vender seus personalizados sem saber quanto realmente está lucrando!  Com a Calculadora de Precificação Pro, você descobre o preço ideal dos seus produtos em poucos cliques, considerando todos os custos de produção e o lucro que deseja ganhar.  ✨ O que você pode fazer:  ✅ Calcular o custo de materiais, embalagens e mão de obra.  ✅ Incluir gastos com energia, equipamentos e outras despesas.  ✅ Definir seu percentual de lucro e descobrir o preço ideal de venda.  ✅ Calcular encomendas com várias unidades.  ✅ Considerar taxas de cartão e outras taxas de venda.  ✅ Salvar suas precificações para consultar quando quiser.  ✅ Gerar relatórios em PDF com todos os cálculos.  ✅ Utilizar no celular ou computador, sem mensalidades.  🎁 Ideal para quem trabalha com canecas, lembrancinhas, papelaria, cartões, brindes e qualquer tipo de produto personalizado.  💰 Valorize seu trabalho, pare de cobrar no achismo e comece a vender com mais segurança e lucratividade!  Faça seu pagamento e libere seu acesso à calculadora!","descHtml":"\u003cp>Pare de vender seus personalizados sem saber quanto realmente está lucrando!  Com a Calculadora de Precificação Pro, você descobre o preço ideal dos seus produtos em poucos cliques, considerando todos os custos de produção e o lucro que deseja ganhar.  ✨ O que você pode fazer:  ✅ Calcular o custo de materiais, embalagens e mão de obra.  ✅ Incluir gastos com energia, equipamentos e outras despesas.  ✅ Definir seu percentual de lucro e descobrir o preço ideal de venda.  ✅ Calcular encomendas com várias unidades.  ✅ Considerar taxas de cartão e outras taxas de venda.  ✅ Salvar suas precificações para consultar quando quiser.  ✅ Gerar relatórios em PDF com todos os cálculos.  ✅ Utilizar no celular ou computador, sem mensalidades.  🎁 Ideal para quem trabalha com canecas, lembrancinhas, papelaria, cartões, brindes e qualquer tipo de produto personalizado.  💰 Valorize seu trabalho, pare de cobrar no achismo e comece a vender com mais segurança e lucratividade!  Faça seu pagamento e libere seu acesso à calculadora!\u003c/p>","rich":"\u003cspan style=\"color: rgb(243, 247, 253); font-family: Inter, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif; font-size: 16.5px; font-weight: 700; white-space: pre-line; background-color: rgb(6, 16, 29);\">Pare de vender seus personalizados sem saber quanto realmente está lucrando!\n\nCom a Calculadora de Precificação Pro, você descobre o preço ideal dos seus produtos em poucos cliques, considerando todos os custos de produção e o lucro que deseja ganhar.\n\n✨ O que você pode fazer:\n\n✅ Calcular o custo de materiais, embalagens e mão de obra.\n\n✅ Incluir gastos com energia, equipamentos e outras despesas.\n\n✅ Definir seu percentual de lucro e descobrir o preço ideal de venda.\n\n✅ Calcular encomendas com várias unidades.\n\n✅ Considerar taxas de cartão e outras taxas de venda.\n\n✅ Salvar suas precificações para consultar quando quiser.\n\n✅ Gerar relatórios em PDF com todos os cálculos.\n\n✅ Utilizar no celular ou computador, sem mensalidades.\n\n🎁 Ideal para quem trabalha com canecas, lembrancinhas, papelaria, cartões, brindes e qualquer tipo de produto personalizado.\n\n💰 Valorize seu trabalho, pare de cobrar no achismo e comece a vender com mais segurança e lucratividade!\n\nFaça seu pagamento e libere seu acesso à calculadora!\u003c/span>","tag":"","featured":true,"cta":"Comprar agora","accent":""},{"id":"07wc76xcmwbhgvks","sectionId":"mq2yjvrvmwbclrcv","title":"Aula de edição dos cartões","cover":"https://i.imgur.com/R6Ue2Uf.jpeg","short":"","description":"","descHtml":"","rich":"","tag":"","featured":false,"cta":"Acessar","accent":""}],"resources":[{"id":"8urm6r2nmwbcuqpu","productId":"576djjlbmwbcrgcs","title":"CLIQUE PARA ABRIR NO CANVA","short":"Canva","url":"https://canva.link/enfqkujla63sf9u","icon":"🎨","purchase":false,"price":null,"cta":"Acessar"},{"id":"jnaobqmwmwbd0m8k","productId":"ptvtkhyemwbcytya","title":"Clique para abrir no Canva","short":"Canva","url":"https://canva.link/iyd738fqb6d4tqs","icon":"🎨","purchase":false,"price":null,"cta":"Acessar"},{"id":"zadwyrsymwbd52fl","productId":"a5r6d0gfmwbd3e5p","title":"Clique para abrir no Canva","short":"Canva","url":"https://canva.link/4aqgehb6ekiwn9g","icon":"🎨","purchase":false,"price":null,"cta":"Acessar"},{"id":"7airtawkmwbd7h2k","productId":"q1kejse0mwbd6tkp","title":"Clique para abrir no Canva","short":"Canva","url":"https://canva.link/ajmzqi7zi84kch2","icon":"🎨","purchase":false,"price":null,"cta":"Acessar"},{"id":"3lmq0f0smwbd9tl2","productId":"j07azkc4mwbd8oxo","title":"Clique para abrir no Canva","short":"Canva","url":"https://canva.link/ut4mtidsgjjchd2","icon":"🎨","purchase":false,"price":null,"cta":"Acessar"},{"id":"fnt3l0o8mwbdd10h","productId":"rljxi6fbmwbdccw9","title":"Clique para abrir no Canva","short":"Canva","url":"https://canva.link/uk71susdy7t55v4","icon":"🎨","purchase":false,"price":null,"cta":"Acessar"},{"id":"y849mizemwbdhsqu","productId":"6fcaepp1mwbdg9bi","title":"Clique para abrir no Canva","short":"Canva","url":"https://canva.link/t6doh0dgfcyduxu","icon":"🎨","purchase":false,"price":null,"cta":"Acessar"},{"id":"ym0ok77kmwbdvveg","productId":"chbwpkycmwbdrmwp","title":"Comparar agora","short":"Comprar","url":"https://checkoutgetfy.com/c/ghe2usa?offer=mr6jrpbqrl","icon":"🛒","purchase":true,"price":{"currentCents":1090,"originalCents":4790,"discountPercent":77,"currentLabel":"R$ 10,90","originalLabel":"R$ 47,90","discountLabel":"-77%"},"cta":"Comprar agora"},{"id":"7c5o4xnzmwbemx1e","productId":"qkfbbnmamwbemjf8","title":"Clique para abrir no drive","short":"Drive","url":"https://drive.google.com/drive/folders/1__TkZSdWlLECejJebim7SK1mwG0-lYoc","icon":"📁","purchase":false,"price":null,"cta":"Acessar"},{"id":"n7ju852umwbflgrf","productId":"y39jb8phmwbfkyix","title":"Modelo 01","short":"Canva","url":"https://canva.link/j1af8gaepol9mee","icon":"🎨","purchase":false,"price":null,"cta":"Acessar"},{"id":"ypkazf16mwbfscbs","productId":"kkusuq48mwbfrp8t","title":"Compre agora","short":"Comprar","url":"https://checkoutgetfy.com/c/s9tupo1?offer=lx8d1gczre","icon":"🛒","purchase":true,"price":{"currentCents":990,"originalCents":2790,"discountPercent":65,"currentLabel":"R$ 9,90","originalLabel":"R$ 27,90","discountLabel":"-65%"},"cta":"Comprar agora"},{"id":"hs4z9racmwbfz2ew","productId":"ex7di3z0mwbfxvog","title":"COMPRE AGORA","short":"Comprar","url":"https://checkoutgetfy.com/c/bn19mpf?offer=dvclmgx5l8","icon":"🛒","purchase":true,"price":{"currentCents":990,"originalCents":3790,"discountPercent":74,"currentLabel":"R$ 9,90","originalLabel":"R$ 37,90","discountLabel":"-74%"},"cta":"Comprar agora"},{"id":"sldgc6symwbhh8ox","productId":"07wc76xcmwbhgvks","title":"Assista a aula","short":"Tutorial","url":"https://youtu.be/TSRCvfRiDjg?si=k4EESlqPodYLdtdO","icon":"▶️","purchase":false,"price":null,"cta":"Acessar"},{"id":"ru8ys5wemwbfpl1r","productId":"y39jb8phmwbfkyix","title":"Modelo 02","short":"Canva","url":"https://canva.link/ffdfkv09m7ht29x","icon":"🎨","purchase":false,"price":null,"cta":"Acessar"}]}</script>
+<script>
+(function(){
+  var ICON = '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>';
+  var data = JSON.parse(document.getElementById('data').textContent);
+  var area = data.area, cats = data.categories, prods = data.products, res = data.resources;
+  var GKEY = 'tm-showcase-session:' + (area.name || 'vitrine');
+  var user = null; try { user = JSON.parse(localStorage.getItem(GKEY) || 'null'); } catch(e){}
+  var app = document.getElementById('app');
+  var state = { q: '', cat: 'all', product: null, unlocked: !area.accessPassword || !!user, err: '', menu: false };
+  function esc(s){ return String(s==null?'':s).replace(/[&<>"']/g, function(c){ return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]; }); }
+  function sanitizeRichStyle(value){
+    var out = [];
+    var parts = String(value == null ? '' : value).split(';');
+    for (var i=0;i<parts.length;i++){
+      var part = parts[i];
+      var idx = part.indexOf(':');
+      if (idx < 0) continue;
+      var prop = part.slice(0, idx).trim().toLowerCase();
+      var val = part.slice(idx + 1).trim().toLowerCase();
+      if (prop === 'text-align' && /^(left|right|center|justify)$/.test(val)) out.push('text-align:' + val);
+      else if (prop === 'font-weight' && /^(bold|[6-9]00)$/.test(val)) out.push('font-weight:' + val);
+      else if (prop === 'font-style' && val === 'italic') out.push('font-style:italic');
+      else if (prop === 'text-decoration') {
+        var deco = [];
+        if (/\bunderline\b/.test(val)) deco.push('underline');
+        if (/\bline-through\b/.test(val)) deco.push('line-through');
+        if (deco.length) out.push('text-decoration:' + deco.join(' '));
+      }
+    }
+    return out.join(';');
+  }
+  function sanitizeRichHtml(value){
+    var raw = String(value == null ? '' : value);
+    if (!raw) return '';
+    var tpl = document.createElement('template');
+    tpl.innerHTML = raw;
+    var allowed = { p:1, br:1, div:1, span:1, strong:1, b:1, em:1, i:1, u:1, s:1, strike:1, del:1, h1:1, h2:1, h3:1, h4:1, h5:1, h6:1, ul:1, ol:1, li:1, a:1, blockquote:1, pre:1, code:1, hr:1, img:1, sub:1, sup:1 };
+    var drop = { script:1, style:1, iframe:1, object:1, embed:1, link:1, meta:1, base:1, form:1, input:1, button:1, textarea:1, select:1, option:1, svg:1, math:1, video:1, audio:1, source:1, track:1, canvas:1, noscript:1, template:1 };
+    var attrs = { a: { href:1, title:1, target:1 }, img: { src:1, alt:1, title:1, width:1, height:1 } };
+    function safeUrl(v, image){
+      var raw2 = String(v == null ? '' : v).trim();
+      if (!raw2) return false;
+      var compact = raw2.replace(/[\u0000-\u0020]+/g, '').toLowerCase();
+      var m = /^([a-z][a-z0-9+.-]*):/.exec(compact);
+      if (!m) return true;
+      var s = m[1];
+      if (image) return s === 'http' || s === 'https' || (s === 'data' && /^data:image\/(?:png|jpe?g|gif|webp|avif);/i.test(compact));
+      return s === 'http' || s === 'https' || s === 'mailto' || s === 'tel';
+    }
+    function walk(node){
+      var kids = Array.prototype.slice.call(node.childNodes);
+      for (var i=0;i<kids.length;i++){
+        var child = kids[i];
+        if (child.nodeType === 8) { child.parentNode.removeChild(child); continue; }
+        if (child.nodeType !== 1) continue;
+        var tag = child.tagName.toLowerCase();
+        if (drop[tag]) { child.parentNode.removeChild(child); continue; }
+        walk(child);
+        if (!allowed[tag]) {
+          var parent = child.parentNode;
+          while (child.firstChild) parent.insertBefore(child.firstChild, child);
+          parent.removeChild(child);
+          continue;
+        }
+        var list = Array.prototype.slice.call(child.attributes);
+        var allowedAttrs = attrs[tag] || {};
+        for (var k=0;k<list.length;k++){
+          var attr = list[k];
+          var name = attr.name.toLowerCase();
+          if (name === 'style') {
+            var style = sanitizeRichStyle(attr.value);
+            if (style) child.setAttribute('style', style);
+            else child.removeAttribute(attr.name);
+            continue;
+          }
+          if (name.indexOf('on') === 0 || !allowedAttrs[name]) { child.removeAttribute(attr.name); continue; }
+          if (name === 'href' && !safeUrl(attr.value, false)) child.removeAttribute(attr.name);
+          if (name === 'src' && !safeUrl(attr.value, true)) child.removeAttribute(attr.name);
+          if (name === 'target' && !/^_(?:blank|self|parent|top)$/i.test(attr.value)) child.removeAttribute(attr.name);
+          if ((name === 'width' || name === 'height') && !/^\d{1,5}$/.test(attr.value)) child.removeAttribute(attr.name);
+        }
+        if (tag === 'a') {
+          if (!child.getAttribute('href')) {
+            var p2 = child.parentNode;
+            while (child.firstChild) p2.insertBefore(child.firstChild, child);
+            p2.removeChild(child);
+            continue;
+          }
+          child.setAttribute('rel', 'noopener noreferrer');
+        }
+        if (tag === 'img' && !child.getAttribute('src')) child.parentNode.removeChild(child);
+      }
+    }
+    walk(tpl.content);
+    return tpl.innerHTML;
+  }
+  function plainTextToHtml(value){
+    var raw = String(value == null ? '' : value).replace(/\r\n?/g, '\n');
+    if (!raw.trim()) return '';
+    return raw.split(/\n{2,}/).filter(function(part){ return part.trim(); }).map(function(part){ return '<p>' + esc(part).split('\n').join('<br>') + '</p>'; }).join('');
+  }
+  function richTextToHtml(value){
+    var raw = String(value == null ? '' : value);
+    if (!raw.trim()) return '';
+    if (/<\/?(?:p|br|div|span|strong|b|em|i|u|s|strike|del|h[1-6]|ul|ol|li|a|blockquote|pre|code|hr|img|sub|sup|script|style|iframe|object|embed)\b[^>]*>/i.test(raw)) return sanitizeRichHtml(raw);
+    return plainTextToHtml(raw);
+  }
+  function catName(id){ for (var i=0;i<cats.length;i++) if (cats[i].id===id) return cats[i].name; return ''; }
+
+  function filtered(){
+    var q = state.q.trim().toLowerCase();
+    return prods.filter(function(p){
+      if (state.cat !== 'all' && p.sectionId !== state.cat) return false;
+      if (!q) return true;
+      return [p.title,p.short,p.description,p.tag,catName(p.sectionId)].join(' ').toLowerCase().indexOf(q) > -1;
+    });
+  }
+
+  function headerHtml(){
+    return '<header class="hdr"><div class="in">' +
+      '<div class="brand">' +
+        (area.logoUrl ? '<img src="' + esc(area.logoUrl) + '" alt="" />' : '<span class="ph"></span>') +
+        (area.showBrandName ? '<b>' + esc(area.name) + '</b>' : '') +
+      '</div><span class="sp"></span>' +
+      ((area.searchEnabled && area.headerSearch) ? '<div class="searchbar hsearch" style="margin:0">' + ICON + '<input class="search" id="q" placeholder="' + esc(area.searchPlaceholder) + '" value="' + esc(state.q) + '" /></div>' : '') +
+      (area.avatarUrl ? '<img class="avatar" src="' + esc(area.avatarUrl) + '" alt="" />' : '') +
+      (user ? '<div class="prof"><button class="profbtn" id="prof"><span class="ini">' + esc((user.name||'?').charAt(0).toUpperCase()) + '</span><span class="nm">Olá, ' + esc(String(user.name||'').split(' ')[0]) + '</span></button>' +
+        (state.menu ? '<div class="profmenu"><div class="n">' + esc(user.name) + '</div><div class="e">' + esc(user.email) + '</div><button class="ghost" id="logout2">Sair</button></div>' : '') + '</div>' : '') +
+      (user && area.showLogout ? '<button class="ghost" id="logout">Sair</button>' : '') +
+    '</div></header>';
+  }
+
+  function cardHtml(p){
+    var accent = p.accent || area.primaryColor;
+    var cover = p.cover
+      ? "background-image:url('" + String(p.cover).replace(/'/g,"%27") + "')"
+      : "background:linear-gradient(135deg," + accent + "," + area.secondaryColor + ")";
+    var label = p.tag || catName(p.sectionId);
+    return '<button class="card" data-id="' + esc(p.id) + '">' +
+      '<div class="cover" style="' + cover + '"></div>' +
+      '<div class="body">' +
+        (label ? '<span class="pill">' + esc(label) + '</span>' : '') +
+        '<span class="t">' + esc(p.title) + '</span>' +
+        ((p.short||p.description) ? '<span class="d">' + esc(p.short || p.description) + '</span>' : '') +
+        '<span class="btn go">' + esc(p.cta || 'Acessar') + '</span>' +
+      '</div></button>';
+  }
+
+  function renderGate(){
+    app.innerHTML = '<div class="gate"' + (area.loginBackgroundUrl ? ' style="background-image:url(\'' + area.loginBackgroundUrl + '\');background-size:cover;background-position:center"' : '') + '>' +
+      '<div class="box">' +
+        (area.loginLogoUrl ? '<img class="logo" src="' + esc(area.loginLogoUrl) + '" alt="" />' : '') +
+        '<h2>' + esc(area.loginDisplayName) + '</h2>' +
+        '<p>' + esc(area.loginTagline) + '</p>' +
+        (String(area.loginInstructions||'').trim() ? '<div class="info">' + esc(area.loginInstructions) + '</div>' : '') +
+        '<input id="nm" placeholder="Nome completo" />' +
+        '<input id="em" type="email" placeholder="E-mail" />' +
+        '<input id="pw" type="password" placeholder="Senha de acesso" />' +
+        (state.err ? '<div class="err">' + esc(state.err) + '</div>' : '') +
+        '<button class="btn" id="go">Entrar</button>' +
+        (String(area.loginAccessNotice||'').trim() ? '<div class="notice"><span>⚠️</span><span>' + esc(area.loginAccessNotice) + '</span></div>' : '') +
+        ((area.supportEmail || area.supportWhatsapp) ? '<div class="support"><div>' + esc(area.loginSupportText) + '</div><div class="links">' +
+          (area.supportEmail ? '<a href="mailto:' + esc(area.supportEmail) + '">✉ ' + esc(area.supportEmail) + '</a>' : '') +
+          (area.supportWhatsapp ? '<a target="_blank" rel="noopener" href="https://wa.me/' + String(area.supportWhatsapp).replace(/\D/g,'') + '">WhatsApp</a>' : '') +
+        '</div></div>' : '') +
+      '</div></div>';
+    function submit(){
+      var v = document.getElementById('pw').value.trim();
+      var n = document.getElementById('nm').value.trim(), m = document.getElementById('em').value.trim();
+      if (!n || !m) { state.err = 'Preencha nome e e-mail.'; return render(); }
+      if (v === String(area.accessPassword).trim()) { user = { name: n, email: m }; localStorage.setItem(GKEY, JSON.stringify(user)); state.unlocked = true; state.err=''; render(); showWelcome(); }
+      else { state.err = 'Senha incorreta.'; render(); }
+    }
+    document.getElementById('go').onclick = submit;
+    document.getElementById('pw').addEventListener('keydown', function(e){ if (e.key === 'Enter') submit(); });
+  }
+
+  function priceHtml(r){
+    var p = r.price;
+    if (!p) return '';
+    return '<div class="price-box">' +
+      (r.title ? '<div class="price-label">' + esc(r.title) + '</div>' : '') +
+      '<div class="price-row">' +
+        '<span class="price-current">' + esc(p.currentLabel) + '</span>' +
+        (p.originalLabel ? '<span class="price-old">' + esc(p.originalLabel) + '</span>' : '') +
+        (p.discountLabel ? '<span class="price-badge">' + esc(p.discountLabel) + '</span>' : '') +
+      '</div></div>';
+  }
+
+  function renderDetail(p){
+    var list = res.filter(function(r){ return r.productId === p.id; });
+    app.innerHTML = headerHtml() + '<div class="detail">' +
+      '<button class="back" id="back">← Voltar para a vitrine</button>' +
+      (p.cover ? '<img class="hero-img" src="' + esc(p.cover) + '" alt="" />' : '') +
+      '<div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:18px">' +
+        (catName(p.sectionId) ? '<span class="pill">' + esc(catName(p.sectionId)) + '</span>' : '') +
+        (p.tag ? '<span class="pill">' + esc(p.tag) + '</span>' : '') +
+      '</div>' +
+      '<h1>' + esc(p.title) + '</h1>' +
+      (p.descHtml ? '<div class="desc rich">' + p.descHtml + '</div>' : '') +
+      (p.rich ? '<div class="desc rich">' + richTextToHtml(p.rich) + '</div>' : '') +
+      '<div class="divider"></div>' +
+      '<h2 class="sec">Acessos e materiais</h2><div style="margin-top:14px">' +
+      (list.length ? list.map(function(r){
+        if (r.purchase) return '<div class="purchase-block">' + priceHtml(r) + '<a class="btn purchase" href="' + esc(r.url || '#') + '" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">🛒</span> ' + esc(r.cta) + '</a></div>';
+        return '<a class="res" href="' + esc(r.url || '#') + '" target="_blank" rel="noopener">' +
+          '<span class="ico">' + r.icon + '</span>' +
+          '<span class="info"><span class="t">' + esc(r.title) + '</span><span class="s">' + esc(r.short) + '</span></span>' +
+          '<span class="cta">' + esc(r.cta) + ' →</span></a>';
+      }).join('') : '<p class="empty">Nenhum recurso cadastrado ainda.</p>') +
+      '</div></div>';
+    bindHeader();
+    document.getElementById('back').onclick = function(){ state.product = null; render(); window.scrollTo(0,0); };
+  }
+
+  function bindHeader(){
+    var lo = document.getElementById('logout');
+    function out(){ localStorage.removeItem(GKEY); user = null; state.menu = false; state.product = null; state.unlocked = !area.accessPassword; render(); }
+    if (lo) lo.onclick = out;
+    var lo2 = document.getElementById('logout2'); if (lo2) lo2.onclick = out;
+    var pf = document.getElementById('prof'); if (pf) pf.onclick = function(){ state.menu = !state.menu; render(); };
+    bindSearch();
+  }
+
+  function bindSearch(){
+    var q = document.getElementById('q');
+    if (!q) return;
+    q.addEventListener('input', function(e){
+      state.q = e.target.value;
+      renderHome();
+      var el = document.getElementById('q');
+      if (el) { el.focus(); el.setSelectionRange(el.value.length, el.value.length); }
+    });
+  }
+
+  function renderHome(){
+    var list = filtered();
+    var feat = list.filter(function(p){ return p.featured; });
+    var rest = list.filter(function(p){ return !p.featured; });
+    app.innerHTML = headerHtml() + '<div class="wrap">' +
+      (area.heroEnabled ? '<section class="hero' + (area.heroAlign==='center'?' center':'') + '">' +
+        ((area.bannerDesktop || area.bannerMobile) ? '<div class="bgimg desk" style="background-image:url(\'' + String(area.bannerDesktop || area.bannerMobile).replace(/'/g,'%27') + '\')"></div>' : '') +
+        (area.bannerMobile ? '<div class="bgimg mob" style="background-image:url(\'' + String(area.bannerMobile).replace(/'/g,'%27') + '\')"></div>' : '') +
+        ((area.bannerDesktop || area.bannerMobile) ? '<div class="veil"></div>' : '') +
+        '<div class="ct">' +
+          '<h1>' + esc(area.title || area.name) + '</h1>' +
+          (area.subtitle ? '<p class="sub">' + esc(area.subtitle) + '</p>' : '') +
+          (area.heroSupport ? '<p class="supp">' + esc(area.heroSupport) + '</p>' : '') +
+          (area.heroButtonLabel ? '<a class="btn" style="margin-top:6px" href="' + esc(area.heroButtonUrl || '#') + '" target="_blank" rel="noopener">' + esc(area.heroButtonLabel) + '</a>' : '') +
+        '</div></section>' : '') +
+      ((area.searchEnabled && !area.headerSearch) ? '<div class="searchbar">' + ICON + '<input class="search" id="q" placeholder="' + esc(area.searchPlaceholder) + '" value="' + esc(state.q) + '" /></div>' : '') +
+      '<div class="chips"><button class="chip' + (state.cat==='all'?' active':'') + '" data-cat="all">Todos</button>' +
+        cats.map(function(c){ return '<button class="chip' + (state.cat===c.id?' active':'') + '" data-cat="' + esc(c.id) + '">' + esc(c.name) + '</button>'; }).join('') +
+      '</div>' +
+      '<main>' +
+        (feat.length ? '<section><div class="sechead"><h2 class="sec featured-title">🔥 ' + esc(area.featuredLabel) + '</h2><span class="count">' + feat.length + '</span></div><div class="grid feat">' + feat.map(cardHtml).join('') + '</div></section>' : '') +
+        '<section><div class="sechead"><h2 class="sec">' + esc(area.allLabel) + '</h2><span class="count">' + rest.length + '</span></div>' +
+          (rest.length ? '<div class="grid">' + rest.map(cardHtml).join('') + '</div>' : '<p class="empty">Nenhum produto encontrado.</p>') +
+        '</section>' +
+      '</main></div>' +
+      '<footer>' + esc(area.name) + '</footer>';
+
+    bindHeader();
+    Array.prototype.forEach.call(document.querySelectorAll('.chip'), function(b){
+      b.onclick = function(){ state.cat = b.getAttribute('data-cat'); renderHome(); };
+    });
+    Array.prototype.forEach.call(document.querySelectorAll('.card'), function(b){
+      b.onclick = function(){
+        var id = b.getAttribute('data-id');
+        for (var i=0;i<prods.length;i++) if (prods[i].id===id) state.product = prods[i];
+        render(); window.scrollTo(0,0);
+      };
+    });
+  }
+
+  function showWelcome(){
+    var WK = 'tm-showcase-welcome:' + (area.name || 'vitrine');
+    if (!area.welcomeEnabled || !user || localStorage.getItem(WK)) return;
+    var first = String(user.name||'').split(' ')[0];
+    var sub = function(t){ return String(t||'').replace(/\{nome\}/gi, first); };
+    var el = document.createElement('div'); el.className = 'wel';
+    el.innerHTML = '<div class="bx"><h3>' + esc(sub(area.welcomeTitle)) + '</h3><div class="m">' + esc(sub(area.welcomeMessage)) + '</div>' +
+      (area.welcomeRequireTerms ? '<label><input type="checkbox" id="wt" /> ' + esc(area.welcomeTerms) + '</label>' : '') +
+      '<button class="btn" id="wb"' + (area.welcomeRequireTerms ? ' disabled' : '') + '>' + esc(area.welcomeButton) + '</button></div>';
+    app.appendChild(el);
+    var wt = document.getElementById('wt'), wb = document.getElementById('wb');
+    if (wt) wt.onchange = function(){ wb.disabled = !wt.checked; };
+    wb.onclick = function(){ localStorage.setItem(WK,'1'); el.remove(); };
+  }
+
+  function render(){
+    if (!state.unlocked) return renderGate();
+    if (state.product) return renderDetail(state.product);
+    renderHome();
+  }
+  render();
+})();
+</script>
+</body>
+</html>
